@@ -13,7 +13,7 @@ The rules for this file:
   * release numbers follow "Semantic Versioning" http://semver.org
 
 ------------------------------------------------------------------------------
-??/??/?? IAlibay, pgbarletta
+??/??/?? IAlibay, pgbarletta, richardjgowers
 
  * 2.5.0
 
@@ -23,6 +23,9 @@ Enhancements
 
 * Add pickling support for Atom, Residue, Segment, ResidueGroup 
     and SegmentGroup. (PR #3953)
+* PDBReader now populates ts.data['tempfactor'] with the tempfactor for
+  each atom *for each frame*.  Note, this does not affect the topology (i.e.
+  `AtomGroup.tempfactors` is not dynamically updated. (Issue #3825)
 
 Changes
 
